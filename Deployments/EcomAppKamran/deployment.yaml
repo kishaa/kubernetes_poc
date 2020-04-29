@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ecom.ui
+  name: ecom-ui-deployment
   labels:
-    app: ecom.ui
+    app: ecom-ui
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ecom.ui
+      app: ecom-ui
   template:
     metadata:
       labels:
-        app: ecom.ui
+        app: ecom-ui
     spec:
       containers:
-      - name: ecom.ui
+      - name: ecom-ui
         image: kishaa/ecomapp.ui:latest
